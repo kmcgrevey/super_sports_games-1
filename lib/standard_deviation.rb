@@ -1,5 +1,5 @@
 ages = [24, 30, 18, 20, 41]
-
+puts "#{ages} <---- YOUR ARRAY"
 # Your code here for calculating the standard deviation
 
 # When you find the standard deviation, print it out
@@ -14,18 +14,27 @@ end
 array_count = ages.length
 
 mean = (array_sum).to_f / array_count # <---- 26.6
-puts mean
+# puts mean
 
 # step4 = subtract mean from the array
 step4 = []
 ages.each do |i|
   step4 << (i - mean).round(2)
 end
-require "pry"; binding.pry
-# step5 = square each of step4 array
 
-# step6 = sum of all of step5
-step6 = 343.2
-# standard_deviation = Math.sqrt(step6 / array_count)
+# step5 = square each of step4 array
+step5 = []
+step4.each do |i|
+  step5 << (i * i).round(2)
+end
+
+# step6 = sum of all of step5 <--- 343.2
+# step6 = 343.2
+step6 = 0
+step5.each do |i|
+  step6 += i
+end
+
+# standard_deviation = 8.28
 standard_deviation = Math.sqrt(step6 / array_count).round(2)
 puts "#{standard_deviation} <---- YOUR STANDARD DEVIATION"
