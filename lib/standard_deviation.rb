@@ -14,3 +14,13 @@ array_count = ages.length
 # puts array_count
 mean = (array_sum).to_f / array_count # <---- 26.6
 puts mean
+
+# step4 = subtract mean from the array
+
+# step5 = square each of step4 array
+
+# step6 = sum of all of step5
+step6 = 343.2
+# standard_deviation = Math.sqrt(step6 / array_count)
+standard_deviation = Math.sqrt(step6 / array_count).round(2)
+puts standard_deviation
